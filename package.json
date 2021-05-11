@@ -20,8 +20,9 @@
 	},
 	"keywords": [
 		"crayon",
-		"crayon-keywords",
-		"css-keywords",
+		"crayon-extension",
+		"chalk",
+		"alias",
 		"keywords",
 		"typescript",
 		"ts",

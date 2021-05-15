@@ -26,7 +26,7 @@
 			"ts": "module"
 		},
 		"nodeArguments": [
-			"--loader=ts-node/esm"
+			"--loader=ts-node/esm/transpile-only.mjs"
 		],
 		"nonSemVerExperiments": {
 			"configurableModuleFormat": true
@@ -58,16 +58,15 @@
 		"log"
 	],
 	"scripts": {
-		"build": "node bundle.js; node denoify.js",
-		"test": "ava",
-		"coverage": "c8 ava",
+		"build": "node --loader ts-node/esm/transpile-only.mjs bundle.ts; node --loader ts-node/esm/transpile-only.mjs denoify.ts",
+		"test": "ava && c8 ava",
 		"coverage-html": "c8 --reporter=html ava"
 	},
 	"files": [
 		"lib"
 	],
 	"dependencies": {
-		"crayon.js": "^2.0.0"
+		"crayon.js": "^2.2.0"
 	},
 	"devDependencies": {
 		"@types/node": "^14.14.41",

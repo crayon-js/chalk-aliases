@@ -1,6 +1,12 @@
-import crayon, { addStyleAlias, addStyleAliases, styles } from 'crayon.js'
+import crayon, {
+	addStyleAlias,
+	addStyleAliases,
+	addStyleFunction,
+	functions,
+	styles,
+} from 'crayon.js'
 import { Crayon } from 'crayon.js/lib/types'
-import { CrayonChalkAlias } from './types'
+import { CrayonChalkAlias, CrayonChalkAliasFunctions } from './types'
 
 for (const aliased in styles) {
 	if (!aliased.toLowerCase().includes('light')) continue
@@ -21,7 +27,13 @@ addStyleAliases({
 	bgGray: 'bgLightBlack',
 	grey: 'lightBlack',
 	bgGrey: 'bgLightBlack',
+	inverse: 'invert',
 })
 
-export default crayon as Crayon<CrayonChalkAlias>
+addStyleFunction('ansi256', functions.ansi8)
+
+export default crayon as any as Crayon<
+	CrayonChalkAlias,
+	CrayonChalkAliasFunctions
+>
 export * from 'crayon.js'

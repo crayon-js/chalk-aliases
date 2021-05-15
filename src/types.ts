@@ -9,4 +9,7 @@ export type ForegroundCrayonChalkAlias =
 	| 'gray'
 	| 'grey'
 
-export type BackgroundCrayonChalkAlias = `bg${Capitalize<ForegroundCrayonChalkAlias>}`
+export type BackgroundCrayonChalkAlias =
+	`bg${Capitalize<ForegroundCrayonChalkAlias>}`
+
+export type CrayonChalkAliasFunctions = 'ansi256' | 'bgAnsi256'

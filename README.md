@@ -18,6 +18,8 @@ crayon.redBright.bgGray('This text has bright red text and gray (bright black) b
 // import crayon2 from 'crayon.js';
 // crayon.redBright.bgGray('this would still work, however without autocompletion')
 ```
+### Wiki
+To learn more about Crayon and its API look [here](https://github.com/crayon-js/crayon/wiki)
 
 ## :handshake: Contributing
 #### Feel free to add any commits, issues and pull requests
